@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tekprax-pdf-studio"
+version = "1.0.0"
+description = "Desktop PDF toolkit with merge, split, organize, optimize, Office conversion, OCR and translation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "TekPrax"}]
+dependencies = [
+  "PySide6>=6.7,<7",
+  "pypdf>=5.0,<7",
+  "PyMuPDF>=1.24,<2",
+  "pdf2docx>=0.5.8,<1",
+  "python-docx>=1.1,<2",
+  "Pillow>=10.4,<12",
+  "pytesseract>=0.3.13,<1",
+  "deep-translator>=1.11.4,<2"
+]
+
+[project.gui-scripts]
+tekprax-pdf-studio = "tekprax_pdf_studio.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
